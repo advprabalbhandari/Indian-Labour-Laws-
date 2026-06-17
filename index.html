@@ -1280,6 +1280,9 @@
             <input type="number" id="basicI" placeholder="Override" oninput="calc()" style="font-size: 12px" />
             <div class="spl s-ok" id="basicSt">50.0%</div>
           </div>
+          <div id="pbBasicAdvisory" style="display:none; margin: 6px 0 2px 0; padding: 8px 12px; background: #fff8e1; border-left: 3px solid #f0a500; border-radius: 4px; font-size: 11.5px; color: #7a5500; line-height: 1.5;">
+            <strong>⚠ Punjab Min. Wage Advisory (Notification dt. 01.05.2026):</strong> Under the Punjab minimum wages notification effective 1 May 2026, the notified minimum wage is a <em>basic rate of wages</em> — it cannot be bifurcated or split into allowances. The Basic Salary (₹<span id="pbBasicEnteredAmt">0</span>/mo) is below the notified minimum wage of ₹<span id="pbMWCatAmt">0</span>/mo for the selected category. The Basic Salary alone must meet or exceed the applicable minimum wage — it cannot be supplemented by DA or other allowances to reach compliance.
+          </div>
           <div class="comp-grid">
             <div>
               <div class="cn">2. Dearness Allowance (DA)</div>
@@ -1310,21 +1313,21 @@
           </div>
           <div class="comp-grid">
             <div>
-              <div class="cn">5. Conveyance</div>
-              <div class="ch2">Standard ₹1,600</div>
+              <div class="cn">5. Conveyance Allowance</div>
+              <div class="ch2">Actual amount paid — enter if applicable</div>
             </div>
-            <div class="av" style="font-size: 12px; padding: 6px 9px">₹1,600</div>
+            <div class="av" style="font-size: 12px; padding: 6px 9px">₹0</div>
             <input type="number" id="convI" placeholder="0" oninput="calc()" style="font-size: 12px" />
-            <div class="spl s-neu">Fixed</div>
+            <div class="spl s-neu">Optional</div>
           </div>
           <div class="comp-grid">
             <div>
-              <div class="cn">6. Medical</div>
-              <div class="ch2">Standard ₹1,250</div>
+              <div class="cn">6. Medical Allowance</div>
+              <div class="ch2">Actual amount paid — enter if applicable</div>
             </div>
-            <div class="av" style="font-size: 12px; padding: 6px 9px">₹1,250</div>
+            <div class="av" style="font-size: 12px; padding: 6px 9px">₹0</div>
             <input type="number" id="medI" placeholder="0" oninput="calc()" style="font-size: 12px" />
-            <div class="spl s-neu">Fixed</div>
+            <div class="spl s-neu">Optional</div>
           </div>
           <div class="comp-grid">
             <div>
@@ -1456,6 +1459,12 @@
           </div>
           <div class="vd ok" id="mwV">
             <span class="vi">✓</span>COMPLIANT — Gross ≥ effective minimum ₹24,804 (higher of state/floor wage)
+          </div>
+          <div id="pbGrossAdvisory" style="display:none; margin-top: 8px; padding: 10px 14px; background: #fff0f0; border-left: 3px solid #c0392b; border-radius: 4px; font-size: 11.5px; color: #6b0000; line-height: 1.6;">
+            <strong>🚨 Punjab Minimum Wages Violation — Action Required</strong><br>
+            The gross monthly salary of ₹<span id="pbGrossAmt">0</span> is below the notified minimum wage of ₹<span id="pbMWViolAmt">0</span>/mo for the selected category (Punjab Notification dt. 01.05.2026).<br><br>
+            <strong>Key legal position:</strong> Under the Code on Wages, 2019 (Section 8) read with the Punjab notification, the minimum wage is fixed as a <em>basic rate of wages</em> and cannot be split into allowances. Payment below the notified rate — even if made up through allowances — constitutes a violation.<br><br>
+            <strong>Employer liability:</strong> Non-payment of minimum wages is punishable under Section 51 of the Code on Wages, 2019 with fine up to ₹50,000 for first offence and up to ₹1,00,000 for subsequent offences, in addition to payment of difference in wages with compensation.
           </div>
           <div class="note" style="margin-top: 8px">
             <strong>Floor Wage Rule (Sec 9):</strong> Once Central Govt. notifies floor wage, whichever is higher —
@@ -1722,7 +1731,7 @@
     <!-- ========== TAB: STATE MIN WAGES ========== -->
     <div class="panel" id="tab-statewages">
       <div class="card" style="margin-bottom: 14px">
-        <div class="ch n1">State-wise Minimum Wages — India 2025 (Latest Notifications)</div>
+        <div class="ch n1">State-wise Minimum Wages — India 2026 (Latest Notifications)</div>
         <div class="cb">
           <div class="mw-search">
             <input
@@ -1751,476 +1760,6 @@
                 </tr>
               </thead>
               <tbody id="mwBody">
-                <tr class="">
-                  <td><strong>Central Govt. Establishments</strong></td>
-                  <td class="num">₹20,358</td>
-                  <td class="num">₹22,568</td>
-                  <td class="num">₹24,804</td>
-                  <td class="num">₹26,910</td>
-                  <td><span class="badge-eff">Oct 1, 2024</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Delhi (NCT)</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹18,456</td>
-                  <td class="num">₹20,371</td>
-                  <td class="num">₹22,411</td>
-                  <td class="num">₹24,356</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Andaman &amp; Nicobar</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹16,822</td>
-                  <td class="num">₹19,300</td>
-                  <td class="num">₹22,126</td>
-                  <td class="num">₹24,284</td>
-                  <td><span class="badge-eff">Jul 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Kerala</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹15,000</td>
-                  <td class="num">₹17,000</td>
-                  <td class="num">₹19,000</td>
-                  <td class="num">₹22,000</td>
-                  <td><span class="badge-eff">Jan 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Karnataka</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹17,666</td>
-                  <td class="num">₹17,800</td>
-                  <td class="num">₹18,135</td>
-                  <td class="num">₹19,537</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Jharkhand</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹13,050</td>
-                  <td class="num">₹15,546</td>
-                  <td class="num">₹18,042</td>
-                  <td class="num">₹20,802</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Goa</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹14,274</td>
-                  <td class="num">₹15,782</td>
-                  <td class="num">₹17,290</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Telangana</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹14,119</td>
-                  <td class="num">₹15,119</td>
-                  <td class="num">₹16,119</td>
-                  <td class="num">₹16,619</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Tamil Nadu</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹13,000</td>
-                  <td class="num">₹14,500</td>
-                  <td class="num">₹16,000</td>
-                  <td class="num">₹18,000</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Meghalaya</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹13,650</td>
-                  <td class="num">₹14,690</td>
-                  <td class="num">₹15,730</td>
-                  <td class="num">₹16,770</td>
-                  <td><span class="badge-eff">Jan 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Andhra Pradesh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹13,249</td>
-                  <td class="num">₹14,249</td>
-                  <td class="num">₹15,249</td>
-                  <td class="num">₹15,748</td>
-                  <td><span class="badge-eff">Apr 1, 2024</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Maharashtra</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹13,635</td>
-                  <td class="num">₹14,441</td>
-                  <td class="num">₹15,246</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Jul 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Chandigarh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹14,394</td>
-                  <td class="num">₹14,844</td>
-                  <td class="num">₹15,069</td>
-                  <td class="num">₹15,469</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Madhya Pradesh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹12,150</td>
-                  <td class="num">₹13,510</td>
-                  <td class="num">₹14,869</td>
-                  <td class="num">₹16,494</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Himachal Pradesh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹12,750</td>
-                  <td class="num">₹13,680</td>
-                  <td class="num">₹14,790</td>
-                  <td class="num">₹15,390</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Assam</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹9,801</td>
-                  <td class="num">₹12,000</td>
-                  <td class="num">₹14,239</td>
-                  <td class="num">₹18,307</td>
-                  <td><span class="badge-eff">Jun 1, 2023</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Bihar</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹11,128</td>
-                  <td class="num">₹12,597</td>
-                  <td class="num">₹14,066</td>
-                  <td class="num">₹17,160</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Uttarakhand</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹12,465</td>
-                  <td class="num">₹13,141</td>
-                  <td class="num">₹13,931</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Apr 1, 2024</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Haryana</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹11,275</td>
-                  <td class="num">₹13,052</td>
-                  <td class="num">₹13,704</td>
-                  <td class="num">₹14,390</td>
-                  <td><span class="badge-eff">Jul 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Gujarat</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹13,013</td>
-                  <td class="num">₹13,299</td>
-                  <td class="num">₹13,585</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Uttar Pradesh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹11,021</td>
-                  <td class="num">₹12,301</td>
-                  <td class="num">₹13,580</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Punjab</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹11,727</td>
-                  <td class="num">₹12,506</td>
-                  <td class="num">₹13,403</td>
-                  <td class="num">₹14,435</td>
-                  <td><span class="badge-eff">Sep 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Dadra &amp; Nagar Haveli/Daman &amp; Diu</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹12,649</td>
-                  <td class="num">₹12,922</td>
-                  <td class="num">₹13,195</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Chhattisgarh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹11,176</td>
-                  <td class="num">₹11,696</td>
-                  <td class="num">₹12,606</td>
-                  <td class="num">₹13,386</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Jammu &amp; Kashmir</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹8,086</td>
-                  <td class="num">₹10,322</td>
-                  <td class="num">₹12,558</td>
-                  <td class="num">₹14,352</td>
-                  <td><span class="badge-eff">Oct 17, 2022</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>West Bengal</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹10,329</td>
-                  <td class="num">₹11,414</td>
-                  <td class="num">₹12,499</td>
-                  <td class="num">₹13,748</td>
-                  <td><span class="badge-eff">Jul 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Sikkim</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹9,700</td>
-                  <td class="num">₹10,700</td>
-                  <td class="num">₹11,700</td>
-                  <td class="num">₹12,700</td>
-                  <td><span class="badge-eff">Apr 1, 2024</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Odisha</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹9,500</td>
-                  <td class="num">₹10,500</td>
-                  <td class="num">₹11,500</td>
-                  <td class="num">₹12,500</td>
-                  <td><span class="badge-eff">Apr 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Manipur</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹8,200</td>
-                  <td class="num">₹9,100</td>
-                  <td class="num">₹10,000</td>
-                  <td class="num">₹11,000</td>
-                  <td><span class="badge-eff">Mar 12, 2025</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Tripura</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹8,010</td>
-                  <td class="num">₹8,919</td>
-                  <td class="num">₹9,828</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Oct 1, 2025</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Mizoram</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹7,200</td>
-                  <td class="num">₹8,100</td>
-                  <td class="num">₹9,000</td>
-                  <td class="num">₹10,000</td>
-                  <td><span class="badge-eff">Apr 1, 2024</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Rajasthan</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹7,410</td>
-                  <td class="num">₹7,722</td>
-                  <td class="num">₹8,034</td>
-                  <td class="num">₹9,334</td>
-                  <td><span class="badge-eff">Jan 1, 2023</span></td>
-                </tr>
-                <tr class="">
-                  <td>
-                    <strong>Arunachal Pradesh</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹6,600</td>
-                  <td class="num">₹6,900</td>
-                  <td class="num">₹7,200</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Apr 1, 2023</span></td>
-                </tr>
-                <tr class="hi">
-                  <td>
-                    <strong>Nagaland</strong><br /><span
-                      class="badge-warn"
-                      style="padding: 1px 6px; border-radius: 4px; font-size: 9px; background: #fde8e8; color: #8c1515"
-                      >Below Central Floor</span
-                    >
-                  </td>
-                  <td class="num">₹5,280</td>
-                  <td class="num">₹6,165</td>
-                  <td class="num">₹7,050</td>
-                  <td class="num">—</td>
-                  <td><span class="badge-eff">Jun 14, 2019</span></td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -2452,10 +1991,10 @@ const MW_DATA = {
   CH: { n: "Chandigarh", u: 14562, ss: 15012, s: 15237, hs: 15637, eff: "Oct 1, 2025", pt: 200, lwf_ee: 10 },
   CG: { n: "Chhattisgarh", u: 11176, ss: 11696, s: 12606, hs: 13386, eff: "Oct 1, 2025", pt: 200, lwf_ee: 15 },
   DD: { n: "DNH & Daman Diu", u: 12649, ss: 12922, s: 13195, hs: 0, eff: "Apr 1, 2025", pt: 0, lwf_ee: 0 },
-  DL: { n: "Delhi (NCT)", u: 18456, ss: 20371, s: 22411, hs: 24356, eff: "Oct 1, 2025", pt: 0, lwf_ee: 0 },
+  DL: { n: "Delhi (NCT)", u: 19846, ss: 21813, s: 23905, hs: 25876, eff: "Apr 1, 2026", pt: 0, lwf_ee: 0 },
   GA: { n: "Goa", u: 14274, ss: 15782, s: 17290, hs: 0, eff: "Oct 1, 2025", pt: 200, lwf_ee: 10 },
   GJ: { n: "Gujarat", u: 13013, ss: 13299, s: 13585, hs: 0, eff: "Oct 1, 2025", pt: 200, lwf_ee: 12 },
-  HR: { n: "Haryana", u: 11825, ss: 13602, s: 14254, hs: 14940, eff: "Jan 1, 2026", pt: 0, lwf_ee: 31 },
+  HR: { n: "Haryana", u: 15221, ss: 16781, s: 18501, hs: 19426, eff: "Apr 1, 2026", pt: 0, lwf_ee: 31 },
   HP: { n: "Himachal Pradesh", u: 12750, ss: 13680, s: 14790, hs: 15390, eff: "Apr 1, 2025", pt: 0, lwf_ee: 0 },
   JK: { n: "Jammu & Kashmir", u: 9330, ss: 11500, s: 13800, hs: 15600, eff: "Apr 1, 2025", pt: 0, lwf_ee: 0 },
   JH: { n: "Jharkhand", u: 13050, ss: 15546, s: 18042, hs: 20802, eff: "Oct 1, 2025", pt: 0, lwf_ee: 0 },
@@ -2468,13 +2007,13 @@ const MW_DATA = {
   MZ: { n: "Mizoram", u: 12600, ss: 14100, s: 15600, hs: 17200, eff: "Oct 1, 2025", pt: 0, lwf_ee: 0 },
   NL: { n: "Nagaland", u: 8500, ss: 9200, s: 10500, hs: 0, eff: "Apr 1, 2025", pt: 0, lwf_ee: 0 },
   OR: { n: "Odisha", u: 11700, ss: 13000, s: 14300, hs: 15912, eff: "Apr 1, 2025", pt: 200, lwf_ee: 10 },
-  PB: { n: "Punjab", u: 11727, ss: 12506, s: 13403, hs: 14435, eff: "Sep 1, 2025", pt: 200, lwf_ee: 5 },
+  PB: { n: "Punjab", u: 13486, ss: 14383, s: 15414, hs: 16601, staffA: 19431, staffB: 17510, staffC: 15786, staffD: 14406, eff: "May 1, 2026", pt: 200, lwf_ee: 5 },
   RJ: { n: "Rajasthan", u: 8216, ss: 8528, s: 8840, hs: 10140, eff: "Jan 1, 2025", pt: 0, lwf_ee: 0 },
   SK: { n: "Sikkim", u: 15000, ss: 16500, s: 18000, hs: 19500, eff: "Jul 1, 2025", pt: 208, lwf_ee: 0 },
   TN: { n: "Tamil Nadu", u: 13500, ss: 15100, s: 16600, hs: 18600, eff: "Apr 1, 2025", pt: 208, lwf_ee: 20 },
   TG: { n: "Telangana", u: 14619, ss: 15619, s: 16619, hs: 17119, eff: "Oct 1, 2025", pt: 200, lwf_ee: 2 },
   TR: { n: "Tripura", u: 8010, ss: 8919, s: 9828, hs: 0, eff: "Oct 1, 2025", pt: 0, lwf_ee: 0 },
-  UP: { n: "Uttar Pradesh", u: 11521, ss: 12801, s: 14080, hs: 0, eff: "Oct 1, 2025", pt: 0, lwf_ee: 0 },
+  UP: { n: "Uttar Pradesh", u: 11313, ss: 12614, s: 13940, hs: 0, eff: "Apr 1, 2026", pt: 0, lwf_ee: 0 },
   UK: { n: "Uttarakhand", u: 12965, ss: 13641, s: 14431, hs: 0, eff: "Oct 1, 2025", pt: 0, lwf_ee: 0 },
   WB: { n: "West Bengal", u: 10829, ss: 11914, s: 12999, hs: 14248, eff: "Jan 1, 2026", pt: 200, lwf_ee: 3 }
 };
@@ -2493,10 +2032,10 @@ const MW_DATA = {
             semiskilled: d.ss || d.u,
             skilled: d.s || d.u,
             highlyskilled: d.hs || d.s || d.u,
-            staff_a: d.hs || d.s,
-            staff_b: d.hs || d.s,
-            staff_c: d.s,
-            staff_d: d.ss || d.u
+            staff_a: d.staffA || d.hs || d.s,
+            staff_b: d.staffB || d.hs || d.s,
+            staff_c: d.staffC || d.s,
+            staff_d: d.staffD || d.ss || d.u
           }[cat] || d.u;
         let fm =
           {
@@ -2545,7 +2084,10 @@ const MW_DATA = {
         const { stateMW, floorMW, effMW, stateData } = mwInfo;
         const ctc = v("ctcIn");
         const gross = Math.round(ctc / 12);
-        const basicAuto = Math.round(gross * 0.5);
+        const st = document.getElementById("stateSelect").value || "PB";
+        // Punjab: MW is an indivisible basic rate — auto basic must not fall below stateMW
+        const basicAutoRaw = Math.round(gross * 0.5);
+        const basicAuto = (st === "PB" && gross > 0) ? Math.max(basicAutoRaw, stateMW) : basicAutoRaw;
         const hraAuto = Math.round(gross * 0.2);
 
         g("mwDisp").textContent = fmt(stateMW);
@@ -2558,9 +2100,8 @@ const MW_DATA = {
         const da = v("daI"),
           ot = v("otI");
         const hra = v("hraI") || hraAuto;
-        const _rem = Math.max(0, gross - basic - da - ot - hra);
-        const conv = v("convI") || (_rem >= 1600 ? 1600 : 0),
-          med = v("medI") || (_rem - (v("convI") || (_rem >= 1600 ? 1600 : 0)) >= 1250 ? 1250 : 0);
+        const conv = v("convI"),
+          med = v("medI");
         const other = v("otherI");
         const spec = v("specI") || Math.max(0, gross - basic - da - ot - hra - conv - med - other);
         g("specA").textContent = fmt(Math.max(0, gross - basicAuto - da - ot - hraAuto - conv - med - other));
@@ -2571,6 +2112,24 @@ const MW_DATA = {
         g("basicSt").textContent = pct(bPct);
         g("basicSt").className = "spl " + (bPct >= 0.5 ? "s-ok" : "s-warn");
         g("hraSt").textContent = effG > 0 ? pct(hra / effG) : "—";
+
+        // Punjab basic wage advisory — MW is non-bifurcatable basic rate (Notification 01.05.2026)
+        const pbAdv = g("pbBasicAdvisory");
+        if (st === "PB" && gross > 0) {
+          const pbMWCat = stateMW;
+          // Show advisory if the effective basic (manual override or auto) is below MW
+          // Also show if user manually enters something below MW
+          const basicEffective = v("basicI") > 0 ? v("basicI") : basicAuto;
+          if (basicEffective < pbMWCat) {
+            g("pbBasicEnteredAmt").textContent = Math.round(basicEffective).toLocaleString("en-IN");
+            g("pbMWCatAmt").textContent = Math.round(pbMWCat).toLocaleString("en-IN");
+            pbAdv.style.display = "block";
+          } else {
+            pbAdv.style.display = "none";
+          }
+        } else {
+          pbAdv.style.display = "none";
+        }
 
         const wages = basic + da + ot,
           excl = hra + conv + med + spec + other;
@@ -2631,6 +2190,16 @@ const MW_DATA = {
           mwV.innerHTML = `<span class="vi">✗</span>NON-COMPLIANT — Gross below ₹${Math.round(effMW).toLocaleString("en-IN")} effective minimum`;
         }
 
+        // Punjab gross below MW advisory
+        const pbGrossAdv = g("pbGrossAdvisory");
+        if (st === "PB" && ctc && effG < stateMW) {
+          g("pbGrossAmt").textContent = Math.round(effG).toLocaleString("en-IN");
+          g("pbMWViolAmt").textContent = Math.round(stateMW).toLocaleString("en-IN");
+          pbGrossAdv.style.display = "block";
+        } else {
+          pbGrossAdv.style.display = "none";
+        }
+
         const pfW = basic + da;
 
         // FIX 1: EPF — cap ₹1,800, Yes/No toggle with mandatory check
@@ -2654,7 +2223,6 @@ const MW_DATA = {
               "ERROR: EPF is MANDATORY when Basic+DA ≤ ₹15,000 under Code on Social Security 2020. Cannot opt out.";
             g("epfNote").style.color = "var(--r1)";
             epfChk.checked = false; // keep unchecked to show error
-            const epfUserWants = g("epfOpt").checked === false && pfW > 15000;
           } else {
             // Optional — can opt out (Basic+DA > ₹15,000)
             epfDeduct = false;
@@ -2714,7 +2282,6 @@ const MW_DATA = {
         let bonBase, bonMon;
         if (bonusNew) {
           // New: 8.33% of notified min wage for category (schedule)
-          const { stateMW } = getMW();
           bonBase = pfW <= 21000 ? stateMW : 0; // ineligible if >21000
           bonMon = pfW <= 21000 ? Math.round(stateMW * 0.0833) : 0;
           g("bonusModeLbl").textContent = "New (min wage schedule)";
@@ -2772,7 +2339,7 @@ const MW_DATA = {
             if (filter === "low" && d.u >= 10000) return false;
             return true;
           })
-          .sort((a, b) => b[1].s - a[1].s);
+          .sort((a, b) => a[1].n.localeCompare(b[1].n));
         tbody.innerHTML = rows
           .map(([k, d], i) => {
             const below = d.u < FLOOR.u;
